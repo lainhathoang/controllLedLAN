@@ -1,1 +1,1 @@
-# controll 4 Leds through LAN by ESP8266
+# ESP8266 controlls 4 Leds through LAN.
