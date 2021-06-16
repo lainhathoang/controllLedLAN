@@ -9,8 +9,8 @@ ESP8266WebServer server(80);
 // WiFiServerServer(80);
 String webPage;
 
-const char *ssid = "TP-LINK_4D6276";
-const char *password = "Hoangdeptrai";
+const char *ssid = ; // enter your network name here as a String
+const char *password = ; // enter your network password here as a String
 
 void setup() {
   pinMode(16, OUTPUT);
@@ -21,7 +21,7 @@ void setup() {
   //  pinMode(0, OUTPUT);
   //  Serial.println("Connected to esp8266");
 
-  webPage += "<h1>Bat tat led</h1>";
+  webPage += "<h1>Change state of Led(s)</h1>";
   webPage +=
     "<p>Led 1 <a href=\"led1On\"><button>ON</button></a>&nbsp;<a "
     "href=\"led1Off\"><button>OFF</button></a></p>";
@@ -41,7 +41,7 @@ void setup() {
 
   Serial.println();
   Serial.println();
-  Serial.print("Ket noi vao mang:  ");
+  Serial.print("Connected:  ");
   Serial.print(ssid);
 
   WiFi.begin(ssid, password);
@@ -105,7 +105,7 @@ void setup() {
 
   server.begin();
   Serial.println();
-  Serial.println("Hay vao dia chi ip tren de dieu khien led.");
+  Serial.println("Enter this ip to your web browser to control leds.");
 }
 
 void loop() {
